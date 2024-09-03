@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const { PORT, MONGOS_CONNECTION_LINK, JWT_SECERT, EXPIRES_IN } = process.env;
+export const { PORT, MONGOS_CONNECTION_LINK, JWT_SECERT, EXPIRES_IN } = process.env;
 
 const DBConnection = async () => {
   try {
