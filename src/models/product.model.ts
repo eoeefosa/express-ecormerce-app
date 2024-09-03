@@ -20,8 +20,9 @@ const productSchema = new Schema({
   updatedAt: { type: Date, default: Date.now },
   location: { type: String },
   sold: { type: Boolean },
+  ratings: [{ type: Schema.Types.ObjectId, ref: "Rating" }], // Array of references to the Rating schema
 });
 
-const Product = mongoose.model("Products", productSchema);
+const Product = mongoose.model("Product", productSchema);
 
 export default Product;
