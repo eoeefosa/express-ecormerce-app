@@ -147,3 +147,19 @@ export const deleteProduct = async (
     res.status(500).send("Error deleting product.");
   }
 };
+
+export default {
+  createProduct,
+  getProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+} as ProductCurrent;
+
+interface ProductCurrent {
+  createProduct: any;
+  getProducts: any;
+  getProductById: any;
+  updateProduct: any;
+  deleteProduct: any;
+}
