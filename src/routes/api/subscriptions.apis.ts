@@ -10,10 +10,10 @@ import {
 
 const router = Router();
 
-router.post("/", createSubscription);
-router.get("/", getSubscriptions);
-router.get("/:id", getSubscriptionById);
-router.put("/:id", updateSubscription);
-router.delete("/:id", deleteSubscription);
+router.post("/subscriptions", createSubscription);
+router.get("/subscriptions", getSubscriptions);
+router.get("/subscriptions/:id", getSubscriptionById);
+router.put("/subscriptions/:id", updateSubscription);
+router.delete("/subscriptions/:id", deleteSubscription);
 
 export default router;

@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
-import { connect } from "http2";
 import mongoose from "mongoose";
 
 dotenv.config();
 
-export const { PORT, MONGOS_CONNECTION_LINK, JWT_SECERT, EXPIRES_IN } = process.env;
+export const { PORT, MONGOS_CONNECTION_LINK, JWT_SECERT, EXPIRES_IN } =
+  process.env;
 
 const DBConnection = async () => {
   try {
@@ -18,7 +18,4 @@ const DBConnection = async () => {
 
 export default {
   connect: DBConnection,
-  port: PORT,
-  JWT_SECERT: JWT_SECERT,
-  EXPIRES_IN: EXPIRES_IN,
 };

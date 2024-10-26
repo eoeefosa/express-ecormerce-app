@@ -1,20 +1,25 @@
 import request from "supertest";
 import app from "../../../index";
-import ProductCurrent from "../../../src/controllers/product.controller";
 import Product, { IProduct } from "../../../src/models/product.model";
+import Category, { ICategory } from "../../../src/models/categories.model";
 
 describe("Product Routes", () => {
   let product: IProduct;
 
   beforeEach(async () => {
+    let category: ICategory | null = await Category.findOne({
+      name: "Electronics",
+    }); // Or create if it doesn't exist
     // ... create product ...
-    product = await ProductCurrent.createProduct({
+    product = await Product.create({
       name: "Test Product",
       description: "Test product description",
       price: 100,
-      category: "Electronics",
+      category: category!._id,
       imageUrl: "https://example.com/image.jpg",
     });
+
+    console.log(product);
   });
 
   afterEach(async () => {

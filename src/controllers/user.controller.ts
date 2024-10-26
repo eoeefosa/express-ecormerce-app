@@ -112,7 +112,7 @@ export const protect = async (
             isAdmin: boolean;
         };
        
-    req.user = decoded; // Adding user data to request object
+    // req.user = decoded; 
 
     next();
   } catch (error) {

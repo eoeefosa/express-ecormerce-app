@@ -10,10 +10,10 @@ import {
 
 const router = Router();
 
-router.post("/", createRating);
-router.get("/", getRatings);
-router.get("/:id", getRatingById);
-router.put("/:id", updateRating);
-router.delete("/:id", deleteRating);
+router.post("/ratings", createRating);
+router.get("/ratings", getRatings);
+router.get("/ratings/:id", getRatingById);
+router.put("/ratings/:id", updateRating);
+router.delete("/ratings/:id", deleteRating);
 
 export default router;

@@ -10,10 +10,10 @@ import {
 
 const router = Router();
 
-router.post("/", createOrder);
-router.get("/", getOrders);
-router.get("/:id", getOrderById);
-router.put("/:id", updateOrder);
-router.delete("/:id", deleteOrder);
+router.post("/order", createOrder);
+router.get("/order", getOrders);
+router.get("/order/:id", getOrderById);
+router.put("/order/:id", updateOrder);
+router.delete("/order/:id", deleteOrder);
 
 export default router;

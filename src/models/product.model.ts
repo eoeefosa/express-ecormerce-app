@@ -28,7 +28,7 @@ export interface IProduct extends Document {
 
 // Define the schema for product variations
 const productVariationSchema = new Schema<IProductVariation>({
-  sku: { type: String, required: true, unique: true },
+  // sku: { type: String, required: true, unique: true },
   color: { type: String, required: true },
   size: { type: String, required: true },
   price: { type: Number, required: true },

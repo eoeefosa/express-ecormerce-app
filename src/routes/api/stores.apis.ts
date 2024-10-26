@@ -12,14 +12,19 @@ import {
 
 const router = Router();
 
-router.post("/", createStore);
-router.get("/", getStores);
-router.get("/:id", getStoreById);
-router.put("/:id", updateStore);
-router.delete("/:id", deleteStore);
+router.post("/store", createStore);
+router.get("/store", getStores);
+router.get("/store/:id", getStoreById);
+router.put("/store/:id", updateStore);
+router.delete("/store/:id", deleteStore);
 
 // Routes for managing products in a store
-router.post("/add-products", addProductsToStore);
-router.post("/remove-product", removeProductFromStore);
+router.post("/store/products", addProductsToStore);
+router.delete("/store/product", removeProductFromStore);
+// get products from store 
+// router.get("/store/products", addProductsToStore);
+// update product by id in store
+// router.put("/store/product", removeProductFromStore);
+
 
 export default router;

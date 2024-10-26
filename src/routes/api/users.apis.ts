@@ -11,8 +11,8 @@ import {
 const router = Router();
 
 // Public Routes
-router.post("/register", registerUser);
-router.post("/login", loginUser);
+router.post("/user/register", registerUser);
+router.post("/user/login", loginUser);
 
 // Protected Routes
 router.get("/all", protect, admin, getAllUsers);

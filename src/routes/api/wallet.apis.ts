@@ -12,10 +12,10 @@ import {
 const router = Router();
 
 // User Routes
-router.get("/:userId/balance", getWalletBalance);
-router.post("/:userId/add-funds", addFundsToWallet);
-router.post("/:userId/withdraw", withdrawFundsFromWallet);
-router.get("/:userId/transactions", getWalletTransactions);
+router.get("/wallet/:userId/balance", getWalletBalance);
+router.post("/wallet/:userId/add-funds", addFundsToWallet);
+router.post("/wallet/:userId/withdraw", withdrawFundsFromWallet);
+router.get("/wallet/:userId/transactions", getWalletTransactions);
 
 // Admin Routes
 router.get("/admin/all-wallets", getAllWallets);
