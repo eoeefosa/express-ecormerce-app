@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { JWT_SECERT } from "../../configs"; // Adjust the import as necessary
+import { JWT_SECERT } from "../configs"; // Adjust the import as necessary
 
 // Middleware to protect routes
 export const protect = async (

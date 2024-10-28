@@ -152,7 +152,7 @@ export const getProducts = async (
     const products = await Product.find()
       .populate("category")
       .populate("ratings");
-    res.status(200).json(products);
+    res.status(201).json(products);
   } catch (error) {
     console.error("Error retrieving products:", error);
     res.status(500).send("Error retrieving products.");

@@ -3,8 +3,8 @@ import morgan from "morgan";
 import helmet from "helmet";
 import configs from "./configs";
 
-import swaggerDoc from "./src/utils/swagger";
-import routes from "./src/routes/index";
+import swaggerDoc from "./utils/swagger";
+import routes from "./routes/index";
 import http from "http";
 
 // const PORT = configs.port || 5000;

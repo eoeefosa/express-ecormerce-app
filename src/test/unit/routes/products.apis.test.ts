@@ -1,7 +1,7 @@
 import request from "supertest";
-import app from "../../../index";
-import Product, { IProduct } from "../../../src/models/product.model";
-import Category, { ICategory } from "../../../src/models/categories.model";
+import Product, { IProduct } from "../../../models/product.model";
+import Category, { ICategory } from "../../../models/categories.model";
+import app from "../../..";
 
 describe("Product Routes", () => {
   let product: IProduct;
@@ -25,7 +25,10 @@ describe("Product Routes", () => {
   afterEach(async () => {
     // Delete the specific product created in beforeEach
     // await ProductCurrent.deleteProduct(product._id);
-    await Product.findByIdAndDelete(product._id);
+    // Ensure you are deleting the correct product
+    if (product && product._id) {
+      await Product.findByIdAndDelete(product._id);
+    }
   });
 
   it("should create a new product", async () => {
